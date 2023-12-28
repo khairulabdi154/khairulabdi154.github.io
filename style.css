@@ -336,7 +336,7 @@ right:0;
 font-size:10px;
 width:15px;
 height:15px;
-background-color:#445cfd;
+background-color:#fbdd03;
 color:#fff;
 -webkit-border-radius:50%; 
 -moz-border-radius:50%;  
@@ -353,7 +353,7 @@ max-width:55%;
 padding:12px 0 0 0;
 }
 .navbarpages.navbarpagesbg{
-background-color:#445cfd;	
+background-color:#fbdd03;	
 }
 /*===============================================*/
 /* 5. CUSTOM BUTTONS */
@@ -443,10 +443,10 @@ transition-duration: 400ms;
 color:#222222;
 }
 .panel-left, .pagepanel{
-background-color:#445cfd;
+background-color:#fbdd03;
 }
 .panel-right{
-background-color:#445cfd;
+background-color:#fbdd03;
 }
 
 /* 6-1. USER ACCOUNT SIDEBAR RIGHT */
@@ -540,7 +540,7 @@ line-height:30px;
 text-align:center;
 -webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;
 background-color:#eaca02;
-color:#445cfd;
+color:#fbdd03;
 }
 .user-nav ul li a{
 font-size:14px;
@@ -736,7 +736,7 @@ padding:5px 0 0 20px;
 /* 7. PAGES LAYOUT GENERAL */
 /*===============================================*/	
 .homepage{
-background-color:#445cfd;
+background-color:#fbdd03;
 }
 #pages_maincontent{
 width:100%;
@@ -911,7 +911,7 @@ font-size:12px;
 padding:5px;
 font-weight:300;
 color:#fff;
-background-color:#445cfd;
+background-color:#fbdd03;
 display:inline;
 } 
 .slider-caption p{
@@ -948,11 +948,11 @@ width: 95%;
 }
 .swiper-container .swiper-pagination-bullet-active {
 opacity: 1;
- border:1px solid #445cfd;
+ border:1px solid #fbdd03;
 }
 .swiper-container-pages .swiper-pagination-bullet-active {
 opacity: 1;
-background: #445cfd;
+background: #fbdd03;
 }
 .swiper-pagination-toolbar{
 position: absolute;
@@ -996,14 +996,14 @@ background: #000;
 	-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;
 }
 .swiper-button-next{
-	background:url(images/nav-next.png) no-repeat center #445cfd; 
+	background:url(images/nav-next.png) no-repeat center #fbdd03; 
 	width: 40px;
     height: 40px;
 	bottom:22%;
 	right:2.5%;
 }
 .swiper-button-prev{
-	background:url(images/nav-prev.png) no-repeat center #445cfd; 
+	background:url(images/nav-prev.png) no-repeat center #fbdd03; 
 	width: 40px;
     height: 40px;
 	bottom:22%;
@@ -2275,7 +2275,7 @@ backface-visibility: hidden;
 	padding:0 5%;
 }
 .navbar, .toolbar, .subnavbar {
-    background: #445cfd;
+    background: #fbdd03;
 }
 .navbar a.link, .toolbar a.link, .subnavbar a.link {
 	color:#fff;
@@ -2283,7 +2283,7 @@ backface-visibility: hidden;
 .picker-modal .toolbar {
     position: relative;
     width: 100%;
-    background: #445cfd;
+    background: #fbdd03;
 }
 .picker-modal .toolbar a{
 	color:#fff;
@@ -2297,7 +2297,7 @@ backface-visibility: hidden;
     top: auto;
     height: 1px;
     width: 100%;
-    background-color: #445cfd;
+    background-color: #fbdd03;
     display: block;
     z-index: 15;
     -webkit-transform-origin: 50% 100%;
@@ -2312,7 +2312,7 @@ backface-visibility: hidden;
     right: auto;
     height: 1px;
     width: 100%;
-    background-color: #445cfd;
+    background-color: #fbdd03;
     display: block;
     z-index: 15;
     -webkit-transform-origin: 50% 0%;
