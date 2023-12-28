@@ -259,20 +259,67 @@
       <li><a href="http://www.linkedin.com/" class="external"><img src="images/icons/black/linkedin.png" alt="" title="" /><span>LINKEDIN</span></a></li>
       <li><a href="http://www.pinterest.com/" class="external"><img src="images/icons/black/pinterest.png" alt="" title="" /><span>PINTEREST</span></a></li>
       </ul> -->
-      <div class="container">
-	<div class="row">
-			<div class="col-md-12" style="text-align: center;margin-bottom: 20px;">
-				<div id="reader" style="display: inline-block;"></div>
-				<div class="empty"></div>
-				<div id="scanned-result"></div>
-			</div>
-		</div>
-      </div>
-      <div class="close_popup_button"><a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a></div>
-      <div style="width: 500px" id="reader"></div>
+
+	      <style>
+	    main {
+	        display: flex;
+	        justify-content: center;
+	        align-items: center;
+	    }
+	    #reader {
+	        width: 600px;
+	    }
+	    #result {
+	        text-align: center;
+	        font-size: 1.5rem;
+	    }
+	</style>
+	
+	<main>
+	    <div id="reader"></div>
+	    <div id="result"></div>
+	</main>
+	    
     </div>
     </div>
-    
+
+<script>
+	
+	    const scanner = new Html5QrcodeScanner('reader', { 
+	        // Scanner will be initialized in DOM inside element with id of 'reader'
+	        qrbox: {
+	            width: 250,
+	            height: 250,
+	        },  // Sets dimensions of scanning box (set relative to reader element width)
+	        fps: 20, // Frames per second to attempt a scan
+	    });
+	
+	
+	    scanner.render(success, error);
+	    // Starts scanner
+	
+	    function success(result) {
+	
+	        document.getElementById('result').innerHTML = `
+	        <h2>Success!</h2>
+	        <p><a href="${result}">${result}</a></p>
+	        `;
+	        // Prints result as a link inside result element
+	
+	        scanner.clear();
+	        // Clears scanning instance
+	
+	        document.getElementById('reader').remove();
+	        // Removes reader element from DOM since no longer needed
+	    
+	    }
+	
+	    function error(err) {
+	        console.error(err);
+	        // Prints any errors to the console
+	    }
+	
+</script>
 <script src="js/jquery-1.10.1.min.js"></script>
 <script src="js/jquery.validate.min.js" ></script>
 <script src="js/framework7.js"></script>
@@ -282,107 +329,6 @@
 <script src="js/audio.min.js"></script>
 <script src="js/my-app.js"></script>
 <script src="https://raw.githubusercontent.com/mebjas/html5-qrcode/master/minified/html5-qrcode.min.js"></script>
-<script>
-function docReady(fn) {
-    // see if DOM is already available
-    if (document.readyState === "complete" || document.readyState === "interactive") {
-        // call on next available tick
-        setTimeout(fn, 1);
-    } else {
-        document.addEventListener("DOMContentLoaded", fn);
-    }
-}
-/** Ugly function to write the results to a table dynamically. */
-function printScanResultPretty(codeId, decodedText, decodedResult) {
-	let resultSection = document.getElementById('scanned-result');
-    let tableBodyId = "scanned-result-table-body";
-    if (!document.getElementById(tableBodyId)) {
-        let table = document.createElement("table");
-        table.className = "styled-table";
-        table.style.width = "100%";
-        resultSection.appendChild(table);
-        let theader = document.createElement('thead');
-        let trow = document.createElement('tr');
-        let th1 = document.createElement('td');
-        th1.innerText = "Count";
-        let th2 = document.createElement('td');
-        th2.innerText = "Format";
-        let th3 = document.createElement('td');
-        th3.innerText = "Result";
-        trow.appendChild(th1);
-        trow.appendChild(th2);
-        trow.appendChild(th3);
-        theader.appendChild(trow);
-        table.appendChild(theader);
-        let tbody = document.createElement("tbody");
-        tbody.id = tableBodyId;
-        table.appendChild(tbody);
-    }
-    let tbody = document.getElementById(tableBodyId);
-    let trow = document.createElement('tr');
-    let td1 = document.createElement('td');
-    td1.innerText = `${codeId}`;
-    let td2 = document.createElement('td');
-    td2.innerText = `${decodedResult.result.format.formatName}`;
-    let td3 = document.createElement('td');
-    td3.innerText = `${decodedText}`;
-    trow.appendChild(td1);
-    trow.appendChild(td2);
-    trow.appendChild(td3);
-    tbody.appendChild(trow);
-}
-docReady(function() {
-	hljs.initHighlightingOnLoad();
-	var lastMessage;
-	var codeId = 0;
-	function onScanSuccess(decodedText, decodedResult) {
-        /**
-         * If you following the code example of this page by looking at the
-         * source code of the demo page - good job!!
-         * 
-         * Tip: update this function with a success callback of your choise.
-         */
-		if (lastMessage !== decodedText) {
-			lastMessage = decodedText;
-            printScanResultPretty(codeId, decodedText, decodedResult);
-            ++codeId;
-		}
-	}
-    var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
-        // Square QR Box, with size = 80% of the min edge.
-        var minEdgeSizeThreshold = 250;
-        var edgeSizePercentage = 0.75;
-        var minEdgeSize = (viewfinderWidth > viewfinderHeight) ?
-            viewfinderHeight : viewfinderWidth;
-        var qrboxEdgeSize = Math.floor(minEdgeSize * edgeSizePercentage);
-        if (qrboxEdgeSize < minEdgeSizeThreshold) {
-            if (minEdgeSize < minEdgeSizeThreshold) {
-                return {width: minEdgeSize, height: minEdgeSize};
-            } else {
-                return {
-                    width: minEdgeSizeThreshold,
-                    height: minEdgeSizeThreshold
-                };
-            }
-        }
-        return {width: qrboxEdgeSize, height: qrboxEdgeSize};
-    }
-	let html5QrcodeScanner = new Html5QrcodeScanner(
-        "reader", 
-        { 
-            fps: 10,
-            qrbox: qrboxFunction,
-            // Important notice: this is experimental feature, use it at your
-            // own risk. See documentation in
-            // mebjas@/html5-qrcode/src/experimental-features.ts
-            experimentalFeatures: {
-                useBarCodeDetectorIfSupported: true
-            },
-            rememberLastUsedCamera: true,
-            showTorchButtonIfSupported: true
-        });
-	html5QrcodeScanner.render(onScanSuccess);
-});
-</script>
+
   </body>
 </html>
