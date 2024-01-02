@@ -269,7 +269,8 @@ padding:0 0 0 2%;
 }
 .navbar_left a img{
 display:inline-block;
-width:80px;
+width="50%" 
+/* width:80px; */
 padding:12px 0 0 0;
 }
 .arrow--left{
