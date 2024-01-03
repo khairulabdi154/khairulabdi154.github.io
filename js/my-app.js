@@ -279,3 +279,5 @@ $$('.messagebar .link').on('click', function () {
   conversationStarted = true;
 });  
 })           
+
+$locationProvider.html5Mode(true); //activate HTML5 Mode
