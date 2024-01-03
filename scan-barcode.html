@@ -25,17 +25,62 @@
 	  </div>						
 	<div id="pages_maincontent">
       
-<!--           	<h2 class="page_title">Form Pemakaian Ruangan</h2> -->
-<!-- 		<div class="container-iframe"> -->
-<!-- 		  <iframe class="responsive-iframe" src=""></iframe> -->
-		  <iframe class="responsive-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSeMZknrE17oUk6RsBlXP3kZzgw4bV01bmjy6SMTkGScCpCkbQ/viewform?embedded=true" width="640" height="100%" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
-<!-- 		</div>		   -->
+	<div class="content-block">
+	      <h4>Cek Kondisi Dental Unit</h4>
+	      <p>Scan Barcode untuk Cek Kondisi Dental Unit</p>
+	
+		<style>
+		    main {
+		        display: flex;
+		        justify-content: center;
+		        align-items: center;
+		    }
+		    #reader {
+		        width: 600px;
+		    }
+		    #result {
+		        text-align: center;
+		        font-size: 1.5rem;
+		    }
+			/** Format of detected code. */
+			interface QrcodeResultFormat {
+			    format: Html5QrcodeSupportedFormats;
+			    formatName: string;
+			}
+			
+			/** Detailed scan result. */
+			interface QrcodeResult {
+			    text: string;
+			    format: QrcodeResultFormat,
+			}
+			
+			/** QrCode result object. */
+			interface Html5QrcodeResult {
+			    decodedText: string;
+			    result: QrcodeResult;
+			}
+			
+			type QrcodeSuccessCallback
+			    = (decodedText: string, result: Html5QrcodeResult) => void;
+		</style>
+		<main>
+		    <div style="width: 500px" id="reader"></div>
+		    <div id="result"></div> 
+		</main> 
+	    <div class="close_popup_button"><a href="#" class="close-popup"><img src="images/icons/black/menu_close.png" alt="" title="" /></a></div>
                   
         </div>		         
       
     </div>
   </div>
 </div>
+	
+<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+<script>
+	
+</script>
+	
 </body>
 </html> 
