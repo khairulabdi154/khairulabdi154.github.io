@@ -1,0 +1,443 @@
+.iw-limiter {
+    max-width: 500px;
+}
+
+/** Style associated with image viewer. */
+
+.capture-box {
+    margin-bottom: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.capture-box .image-block {
+    /* max-width: 60%; */
+    /* flex: 1 1 auto; */
+    width: 60vw;
+}
+
+.capture-box .info-block {
+    width: 40vw;
+    color: rgb(66, 66, 66);
+    padding-top: 5px;
+    padding-left: 30px;
+}
+
+@media(max-width: 600px) {
+    .capture-box {
+       display: block;
+    }
+
+    .capture-box .image-block {
+        width: 100%;
+    }
+    
+    .capture-box .info-block {
+        width: 100%;
+        color: rgb(66, 66, 66);
+        padding-top: 15px;
+        padding-left: 0px;
+    }
+}
+
+/* @media only screen and (min-width: 600px) {} */
+
+.capture-box .image-block img {
+    width: 100%;
+}
+
+.capture-box .info-block .title {
+    color: rgb(59, 58, 91);
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #80808029;
+    margin-bottom: 5px;
+}
+
+.capture-box .info-block .metadata {
+    margin-top: 10px;
+}
+
+.capture-box .info-block .categories {
+    padding: 5px 0px;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.capture-box .info-block .categories .category a {
+    color: grey;
+}
+
+.capture-box .info-block .links {
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/** CSS for widget-self **/
+.widget-self {
+    display: flex;
+    margin-bottom: 20px;
+    background: #f7f7f7;
+    padding: 10px;
+}
+
+.widget-self .section-image {
+    width: 30vw;
+}
+
+.widget-self .section-info {
+    width: 70vw;
+    padding-left: 20px;
+}
+
+.widget-self .section-info .quote {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+@media(max-width: 750px) {
+    .widget-self {
+        display: block;
+        margin-bottom: 20px;
+        background: #f7f7f7;
+        padding: 10px;
+    }
+    
+    .widget-self .section-image {
+        width: 100%;
+    }
+    
+    .widget-self .section-info {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .widget-self .section-info .quote {
+        font-style: italic;
+        margin-top: 10px;
+    }
+}
+
+/** CSS for widget-self-photos **/
+.widget-self-photos {
+    display: block;
+    margin-top: 20px;
+    background: #f7f7f7;
+    padding: 10px;
+    justify-content: center;
+    box-shadow: #0000001a 5px 6px 20px 3px
+}
+
+.widget-self-photos .header {
+    width: 100%;
+}
+
+.widget-self-photos .section {
+    width: 100%;
+}
+
+.widget-self-photos .header img {
+    width: 400px;
+}
+
+.widget-self-photos .body {
+    padding: 10px;
+    font-style: italic;
+}
+
+.widget-self-photos .footer {
+    padding: 10px;
+    border-top: 1px solid #0000001f;
+}
+
+@media(min-width: 700px) {
+    .widget-self-photos {
+        display: flex;
+        margin-top: 20px;
+        background: #f7f7f7;
+        padding: 10px;
+        justify-content: center;
+        box-shadow: #0000001a 5px 6px 20px 3px
+    }
+    
+    .widget-self-photos .header {
+        width: 30vw;
+    }
+
+    .widget-self-photos .section {
+        width: 70vw;
+    }
+
+    .widget-self-photos .header img {
+        width: 100%;
+    }
+    
+    .widget-self-photos .body {
+        padding: 10px;
+        font-style: italic;
+    }
+    
+    .widget-self-photos .footer {
+        width: 100%;
+        padding: 10px;
+        border-top: none;
+    }
+}
+
+@media(min-width: 1600px) {
+    .widget-self-photos {
+        width: 300px;
+        display: inline-block;
+        background: #f7f7f7;
+        padding: 0px;
+        justify-content: center;
+        box-shadow: #0000001a 5px 6px 20px 3px;
+        position: fixed;
+        top:140px;
+        left: 20px;
+        overflow: hidden;
+    }
+    
+    .widget-self-photos .header {
+        width: 100%;
+    }
+
+    .widget-self-photos .section {
+        width: 100%;
+    }
+
+    .widget-self-photos .header img {
+        width: 100%;
+    }
+    
+    .widget-self-photos .body {
+        padding: 10px;
+    }
+    
+    .widget-self-photos .footer {
+        border-top: 1px solid #0000001f;
+        /* background: #0000000d; */
+        padding: 10px;
+    }
+}
+
+/** custom modification **/
+.post-info {
+    overflow-y: hidden;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.embedded-post, .so-embedded-post {
+    border: 1px solid #e6e6e6;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background: #b3b3b312;
+    box-shadow: #0000000a 0px 0px 5px 5px;
+}
+
+.so-embedded-post {
+    padding-left: 60px;
+    background-image: url(/images/common/stack-overflow.png);
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.embedded-post .embedded-post-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/** Side bars. */
+.post-sidebar-left, .post-sidebar-right {
+    display: none;
+}
+
+@media(min-width: 1500px) {
+    .post-sidebar-left, .post-sidebar-right {
+        display: inline-block;
+        padding: 10px;
+        width: 250px;
+        min-height: 100px;
+        position: absolute;
+        top: 150px;
+    }
+
+    .post-sidebar-left {
+        left: -webkit-calc((100% - 900px) / 2 - 250px);
+        left: calc((100% - 900px) / 2 - 250px);
+        padding: 0px;
+        position: fixed; 
+    }
+
+    .post-sidebar-right {
+        right: 50px;
+        right: 50px;
+        width: -webkit-calc((100% - 800px)/2 - 120px);
+        width: calc((100% - 800px)/2 - 120px);
+        max-width: 400px;
+        font-size: 12pt;
+        border: 1px solid #b5b5b526;
+    }
+
+    .post {
+        max-width: 880px;
+    }
+
+    .sidebar-author-info {
+        border-left: 6px solid #2a7ae2;
+        padding: 10px;
+    }
+
+    .sidebar-author-info .image {
+        width: 110px;
+    }
+
+    .sidebar-author-info .name {
+        font-size: 24pt;
+        font-family: 'Ubuntu';
+    }
+
+    .sidebar-author-info .title, .sidebar-author-info .sub-title {
+        font-size: 12pt;
+    }
+
+    .sidebar-author-info .sub-title {
+        margin-top: 10px;
+    }
+
+    .sidebar-author-info .social {
+        margin-top: 20px;
+    }
+
+    .sidebar-author-info .social a img {
+        width: 22px;
+        margin-right: 5px;
+    }
+
+    .sidebar-author-info .read-more {
+        margin-top: 10px;
+        font-size: 11pt;
+    }
+
+    .sidebar-author-info .read-more a {
+        color: black;
+    }
+
+    .sidebar-claps applause-button {
+        position: relative;
+        cursor: pointer;
+        margin-top: 50px;
+        margin-left: 40px;
+    }
+
+    .sidebar-subscribe {
+        margin-top: 40px;
+        border: 1px solid #6464642e;
+        padding-left: 10px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-radius: 5px;
+    }
+
+    .recommended-books {
+        margin-top: 40px;
+    }
+
+    .recommended-books .astriek {
+        margin-top: 10px;
+        font-size: 10pt;
+        font-style: italic;
+        color: #000000a1;
+        display: none;
+    }
+
+    .recommended-books:hover > .astriek {
+        display: block;
+    }
+}
+
+.post-embed {
+    border: 1px solid silver;
+    margin: 10px;
+    display: flex;
+    padding: 0px;
+    max-height: 150px;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+  
+.post-embed .post-embed-image {
+    margin: 0px;
+    padding: 0px;
+}
+
+.post-embed .post-embed-article {
+    margin: 0px;
+    padding: 20px;
+}
+
+.post-embed .post-embed-image img {
+    margin: 0px;
+    padding: 0px;
+}
+
+.post-embed-article-title a {
+    text-decoration: none;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.post-embed-article-title {
+    margin-bottom: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.post-embed-article-subtitle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 75px;
+}
