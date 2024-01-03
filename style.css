@@ -760,7 +760,7 @@ margin:0px;
 clear:both;
 }
 #pages_maincontent img{
-display:block;
+/* display:block; */
 max-width:100%;
 }
 .layout_fullwidth{
