@@ -25,7 +25,9 @@
       border: 0;
     }
   </style>
- 
+
+<base href="/">
+	
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="Xs4Y8kOjxCHZvery6v-Y6yVIptmWsSjownRLWpRDDlc">
@@ -54,6 +56,14 @@
 <meta name="twitter:creator" content="@minhazav">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","description":"Demo of a cross platform HTML5 QR Code scanner","headline":"HTML5 QR Code Scanner Demo","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://blog.minhazav.dev/images/rsz_self_1_1.jpg"}},"url":"https://blog.minhazav.dev/research/html5-qrcode"}</script>
+
+<script>
+
+	app.config(["$locationProvider", function($locationProvider) {
+		$locationProvider.html5Mode(true);
+	}]);
+	
+</script>	
 	
 </head>
 <body>
