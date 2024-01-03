@@ -1,1 +1,415 @@
+<html>
+<head>
+
+<base href="/">
+	
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="Xs4Y8kOjxCHZvery6v-Y6yVIptmWsSjownRLWpRDDlc">
+<meta name="msvalidate.01" content="C21F82032619E6AE38AEC7FFE4D05827">
+<link rel="stylesheet" href="qr-code/default.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="preload" href="qr-code/main.css" as="style">
+<link rel="stylesheet" href="qr-code/main.css">
+<link rel="preload" href="qr-code/custom.css" as="style">
+<link rel="stylesheet" href="qr-code/custom.css">
+<link rel="stylesheet" href="qr-code/sharebar.css">
+<link rel="alternate" type="application/rss+xml" title="Minhaz&#39;s Blog" href="https://blog.minhazav.dev/feed.xml">
+<link rel="shortcut icon" href="https://blog.minhazav.dev/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="https://blog.minhazav.dev/assets/favicon.ico">
+
+<style type="text/css">
+    .page-contain {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #E7F3F1;
+      font-family: "Open Sans", sans-serif;
+    }
+    .data-card {
+      display: flex;
+      flex-direction: column;
+      max-width: 21.75em;
+      min-height: 20.75em;
+      overflow: hidden;
+      border-radius: 0.5em;
+      text-decoration: none;
+      background: white;
+      margin: 1em;
+      padding: 2.75em 2.5em;
+      box-shadow: 0 1.5em 2.5em -0.5em rgba(0, 0, 0, 0.1);
+      transition: transform 0.45s ease, background 0.45s ease;
+    }
+    .data-card:hover {
+      text-decoration: none;
+    }
+    .data-card h3 {
+      color: #2E3C40 !important;
+      font-size: 3.5em;
+      font-weight: 600;
+      line-height: 1;
+      padding-bottom: 0.5em;
+      margin: 0 0 0.142857143em;
+      border-bottom: 2px solid #753BBD;
+      transition: color 0.45s ease, border 0.45s ease;
+      text-decoration: none;
+    }
+    .data-card h4 {
+      color: #627084 !important;
+      text-transform: uppercase;
+      font-size: 1.125em;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: 0.1em;
+      margin: 0 0 1.777777778em;
+      transition: color 0.45s ease;
+      text-decoration: none;
+    }
+    .data-card p {
+      opacity: 0;
+      color: #FFFFFF !important;
+      font-weight: 600;
+      line-height: 1.8;
+      margin: 0 0 1.25em;
+      transform: translateY(-1em);
+      transition: opacity 0.45s ease, transform 0.5s ease;
+      text-decoration: none;
+    }
+    .data-card .link-text {
+      display: block;
+      color: #753BBD;
+      font-size: 1.125em;
+      font-weight: 600;
+      line-height: 1.2;
+      margin: auto 0 0;
+      transition: color 0.45s ease;
+    }
+    .data-card .link-text svg {
+      margin-left: 0.5em;
+      transition: transform 0.6s ease;
+    }
+    .data-card .link-text svg path {
+      transition: fill 0.45s ease;
+    }
+    .data-card:hover {
+      background: #753BBD;
+      transform: scale(1.02);
+    }
+    .data-card:hover h3 {
+      color: #FFFFFF !important;
+      border-bottom-color: #A754C4;
+    }
+    .data-card:hover h4 {
+      color: #FFFFFF !important;
+    }
+    .data-card:hover p {
+      opacity: 1;
+      transform: none;
+    }
+    .data-card:hover .link-text {
+      color: #FFFFFF !important;
+    }
+    .data-card:hover .link-text svg {
+      -webkit-animation: point 1.25s infinite alternate;
+	      animation: point 1.25s infinite alternate;
+    }
+    .data-card:hover .link-text svg path {
+      fill: #FFFFFF !important;
+    }
+    @-webkit-keyframes point {
+      0% {
+	transform: translateX(0);
+      }
+      100% {
+	transform: translateX(0.125em);
+      }
+    }
+    @keyframes point {
+      0% {
+	transform: translateX(0);
+      }
+      100% {
+	transform: translateX(0.125em);
+      }
+    }
+</style>
+<!-- css section -->
+<style>
+	#reader {
+	    width: 640px;
+	}
+	@media(max-width: 600px) {
+		#reader {
+			width: 300px;
+		}
+	}
+	.empty {
+	    display: block;
+	    width: 100%;
+	    height: 20px;
+	}
+	.alert {
+	    padding: 15px;
+	    margin-bottom: 20px;
+	    border: 1px solid transparent;
+	    border-radius: 4px;
+	}
+	.alert-info {
+	    color: #31708f;
+	    background-color: #d9edf7;
+	    border-color: #bce8f1;
+	}
+	.alert-success {
+	    color: #3c763d;
+	    background-color: #dff0d8;
+	    border-color: #d6e9c6;
+	}
+	#scanapp_ad {
+	    display: none;
+	}
+	@media(max-width: 1500px) {
+		#scanapp_ad {
+			display: block;
+		}
+	}
+</style>
+			
+	
+</head>
+	
+<body>
+
+<div class="pages">	
+	<div data-page="about" class="page no-toolbar no-navbar">
+		<div class="page-content">
+
+			<div class="navbarpages navbarpagesbg">
+				
+				<div class="navbar_left">
+					<div class="logo_text"><a href="index.html"><img src="images/logo1-kecil.png" width="50%" alt="" title="" /></a>
+					</div>
+				</div>
+				<div class="navbar_right navbar_right_menu">
+				      <a href="#" data-panel="left" class="open-panel"><img src="images/icons/white/menu.png" alt="" title="" /></a>
+				</div>			
+	
+		  	</div>	
+
+			
+			<div id="pages_maincontent">
+
+				
+			   <main class="default-content" aria-label="Content">
+			     <div class="post-sidebar-right" style="position: fixed;">
+			   
+			<section class="page-contain">
+
+			</section>
+			   <div class="recent-posts" style="margin-top: 20px;">
+
+			   </div>
+			   <div class="sidebar-ad-1">
+			        <script async="" src="qr-code/f.txt" crossorigin="anonymous"></script>
+			        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2583590292295592" data-ad-slot="6849341899">
+					<iframe id="aswift_0" style="height: 1px !important; max-height: 1px !important; max-width: 1px !important; width: 1px !important;" src="qr-code/saved_resource.html">
+						<iframe id="google_ads_frame0" src="qr-code/saved_resource(1).html">
+							
+						</iframe>
+					</iframe>
+				</ins> 
+				   
+			        <script>
+			            (adsbygoogle = window.adsbygoogle || []).push({});
+			        </script>
+			   </div>
+			</div>
+			     <div class="wrapper-content">
+			      <link rel="canonical" href="https://blog.minhazav.dev/research/html5-qrcode">
+				
+
+				
+		      	<!-- Awal Konten -->
+
+			<h1> HTML5 QR Code scanner</h1>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12" style="text-align: center;margin-bottom: 20px;">
+							<div id="reader" style="display: inline-block; position: relative; padding: 0px; border: 1px solid silver;">
+								<div style="text-align: left; margin: 0px;"><div style="position: absolute; top: 10px; right: 10px; z-index: 2; display: none; padding: 5pt; border: 1px solid rgb(23, 23, 23); font-size: 10pt; background: rgba(0, 0, 0, 0.69); border-radius: 5px; text-align: center; font-weight: 400; color: white;">Powered by <a href="https://scanapp.org/" target="new" style="color: white;">ScanApp</a><br><br><a href="https://github.com/mebjas/html5-qrcode/issues" target="new" style="color: white;">Report issues</a></div><img alt="Info icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjAgNDYwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NjAgNDYwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBkPSJNMjMwIDBDMTAyLjk3NSAwIDAgMTAyLjk3NSAwIDIzMHMxMDIuOTc1IDIzMCAyMzAgMjMwIDIzMC0xMDIuOTc0IDIzMC0yMzBTMzU3LjAyNSAwIDIzMCAwem0zOC4zMzMgMzc3LjM2YzAgOC42NzYtNy4wMzQgMTUuNzEtMTUuNzEgMTUuNzFoLTQzLjEwMWMtOC42NzYgMC0xNS43MS03LjAzNC0xNS43MS0xNS43MVYyMDIuNDc3YzAtOC42NzYgNy4wMzMtMTUuNzEgMTUuNzEtMTUuNzFoNDMuMTAxYzguNjc2IDAgMTUuNzEgNy4wMzMgMTUuNzEgMTUuNzFWMzc3LjM2ek0yMzAgMTU3Yy0yMS41MzkgMC0zOS0xNy40NjEtMzktMzlzMTcuNDYxLTM5IDM5LTM5IDM5IDE3LjQ2MSAzOSAzOS0xNy40NjEgMzktMzkgMzl6Ii8+PC9zdmc+" style="position: absolute; top: 4px; right: 4px; opacity: 0.6; cursor: pointer; z-index: 2; width: 16px; height: 16px;">
+								<div id="reader__header_message" style="display: none; text-align: center; font-size: 14px; padding: 2px 10px; margin: 4px; border-top: 1px solid rgb(246, 246, 246);">
+									
+								</div></div>
+								<div id="reader__scan_region" style="width: 100%; min-height: 100px; text-align: center;"><br><img width="64" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNzEuNjQzIDM3MS42NDMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM3MS42NDMgMzcxLjY0MyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTEwNS4wODQgMzguMjcxaDE2My43Njh2MjBIMTA1LjA4NHoiLz48cGF0aCBkPSJNMzExLjU5NiAxOTAuMTg5Yy03LjQ0MS05LjM0Ny0xOC40MDMtMTYuMjA2LTMyLjc0My0yMC41MjJWMzBjMC0xNi41NDItMTMuNDU4LTMwLTMwLTMwSDEyNS4wODRjLTE2LjU0MiAwLTMwIDEzLjQ1OC0zMCAzMHYxMjAuMTQzaC04LjI5NmMtMTYuNTQyIDAtMzAgMTMuNDU4LTMwIDMwdjEuMzMzYTI5LjgwNCAyOS44MDQgMCAwIDAgNC42MDMgMTUuOTM5Yy03LjM0IDUuNDc0LTEyLjEwMyAxNC4yMjEtMTIuMTAzIDI0LjA2MXYxLjMzM2MwIDkuODQgNC43NjMgMTguNTg3IDEyLjEwMyAyNC4wNjJhMjkuODEgMjkuODEgMCAwIDAtNC42MDMgMTUuOTM4djEuMzMzYzAgMTYuNTQyIDEzLjQ1OCAzMCAzMCAzMGg4LjMyNGMuNDI3IDExLjYzMSA3LjUwMyAyMS41ODcgMTcuNTM0IDI2LjE3Ny45MzEgMTAuNTAzIDQuMDg0IDMwLjE4NyAxNC43NjggNDUuNTM3YTkuOTg4IDkuOTg4IDAgMCAwIDguMjE2IDQuMjg4IDkuOTU4IDkuOTU4IDAgMCAwIDUuNzA0LTEuNzkzYzQuNTMzLTMuMTU1IDUuNjUtOS4zODggMi40OTUtMTMuOTIxLTYuNzk4LTkuNzY3LTkuNjAyLTIyLjYwOC0xMC43Ni0zMS40aDgyLjY4NWMuMjcyLjQxNC41NDUuODE4LjgxNSAxLjIxIDMuMTQyIDQuNTQxIDkuMzcyIDUuNjc5IDEzLjkxMyAyLjUzNCA0LjU0Mi0zLjE0MiA1LjY3Ny05LjM3MSAyLjUzNS0xMy45MTMtMTEuOTE5LTE3LjIyOS04Ljc4Ny0zNS44ODQgOS41ODEtNTcuMDEyIDMuMDY3LTIuNjUyIDEyLjMwNy0xMS43MzIgMTEuMjE3LTI0LjAzMy0uODI4LTkuMzQzLTcuMTA5LTE3LjE5NC0xOC42NjktMjMuMzM3YTkuODU3IDkuODU3IDAgMCAwLTEuMDYxLS40ODZjLS40NjYtLjE4Mi0xMS40MDMtNC41NzktOS43NDEtMTUuNzA2IDEuMDA3LTYuNzM3IDE0Ljc2OC04LjI3MyAyMy43NjYtNy42NjYgMjMuMTU2IDEuNTY5IDM5LjY5OCA3LjgwMyA0Ny44MzYgMTguMDI2IDUuNzUyIDcuMjI1IDcuNjA3IDE2LjYyMyA1LjY3MyAyOC43MzMtLjQxMyAyLjU4NS0uODI0IDUuMjQxLTEuMjQ1IDcuOTU5LTUuNzU2IDM3LjE5NC0xMi45MTkgODMuNDgzLTQ5Ljg3IDExNC42NjEtNC4yMjEgMy41NjEtNC43NTYgOS44Ny0xLjE5NCAxNC4wOTJhOS45OCA5Ljk4IDAgMCAwIDcuNjQ4IDMuNTUxIDkuOTU1IDkuOTU1IDAgMCAwIDYuNDQ0LTIuMzU4YzQyLjY3Mi0zNi4wMDUgNTAuODAyLTg4LjUzMyA1Ni43MzctMTI2Ljg4OC40MTUtMi42ODQuODIxLTUuMzA5IDEuMjI5LTcuODYzIDIuODM0LTE3LjcyMS0uNDU1LTMyLjY0MS05Ljc3Mi00NC4zNDV6bS0yMzIuMzA4IDQyLjYyYy01LjUxNCAwLTEwLTQuNDg2LTEwLTEwdi0xLjMzM2MwLTUuNTE0IDQuNDg2LTEwIDEwLTEwaDE1djIxLjMzM2gtMTV6bS0yLjUtNTIuNjY2YzAtNS41MTQgNC40ODYtMTAgMTAtMTBoNy41djIxLjMzM2gtNy41Yy01LjUxNCAwLTEwLTQuNDg2LTEwLTEwdi0xLjMzM3ptMTcuNSA5My45OTloLTcuNWMtNS41MTQgMC0xMC00LjQ4Ni0xMC0xMHYtMS4zMzNjMC01LjUxNCA0LjQ4Ni0xMCAxMC0xMGg3LjV2MjEuMzMzem0zMC43OTYgMjguODg3Yy01LjUxNCAwLTEwLTQuNDg2LTEwLTEwdi04LjI3MWg5MS40NTdjLS44NTEgNi42NjgtLjQzNyAxMi43ODcuNzMxIDE4LjI3MWgtODIuMTg4em03OS40ODItMTEzLjY5OGMtMy4xMjQgMjAuOTA2IDEyLjQyNyAzMy4xODQgMjEuNjI1IDM3LjA0IDUuNDQxIDIuOTY4IDcuNTUxIDUuNjQ3IDcuNzAxIDcuMTg4LjIxIDIuMTUtMi41NTMgNS42ODQtNC40NzcgNy4yNTEtLjQ4Mi4zNzgtLjkyOS44LTEuMzM1IDEuMjYxLTYuOTg3IDcuOTM2LTExLjk4MiAxNS41Mi0xNS40MzIgMjIuNjg4aC05Ny41NjRWMzBjMC01LjUxNCA0LjQ4Ni0xMCAxMC0xMGgxMjMuNzY5YzUuNTE0IDAgMTAgNC40ODYgMTAgMTB2MTM1LjU3OWMtMy4wMzItLjM4MS02LjE1LS42OTQtOS4zODktLjkxNC0yNS4xNTktMS42OTQtNDIuMzcgNy43NDgtNDQuODk4IDI0LjY2NnoiLz48cGF0aCBkPSJNMTc5LjEyOSA4My4xNjdoLTI0LjA2YTUgNSAwIDAgMC01IDV2MjQuMDYxYTUgNSAwIDAgMCA1IDVoMjQuMDZhNSA1IDAgMCAwIDUtNVY4OC4xNjdhNSA1IDAgMCAwLTUtNXpNMTcyLjYyOSAxNDIuODZoLTEyLjU2VjEzMC44YTUgNSAwIDEgMC0xMCAwdjE3LjA2MWE1IDUgMCAwIDAgNSA1aDE3LjU2YTUgNSAwIDEgMCAwLTEwLjAwMXpNMjE2LjU2OCA4My4xNjdoLTI0LjA2YTUgNSAwIDAgMC01IDV2MjQuMDYxYTUgNSAwIDAgMCA1IDVoMjQuMDZhNSA1IDAgMCAwIDUtNVY4OC4xNjdhNSA1IDAgMCAwLTUtNXptLTUgMjQuMDYxaC0xNC4wNlY5My4xNjdoMTQuMDZ2MTQuMDYxek0yMTEuNjY5IDEyNS45MzZIMTk3LjQxYTUgNSAwIDAgMC01IDV2MTQuMjU3YTUgNSAwIDAgMCA1IDVoMTQuMjU5YTUgNSAwIDAgMCA1LTV2LTE0LjI1N2E1IDUgMCAwIDAtNS01eiIvPjwvc3ZnPg==" style="opacity: 0.8;"></div><div id="reader__dashboard" style="width: 100%;"><div id="reader__dashboard_section" style="width: 100%; padding: 10px 0px; text-align: left;"><div><div id="reader__dashboard_section_csr" style="display: block;">
+									<div style="text-align: center;"><button id="html5-qrcode-button-camera-permission" class="html5-qrcode-element">Request Camera Permissions</button>
+								</div>
+								</div>
+									<div style="text-align: center; margin: auto auto 10px; width: 80%; max-width: 600px; border: 6px dashed rgb(235, 235, 235); padding: 10px; display: none;"><label for="html5-qrcode-private-filescan-input" style="display: inline-block;"><button id="html5-qrcode-button-file-selection" class="html5-qrcode-element">Choose Image - No image choosen</button><input id="html5-qrcode-private-filescan-input" class="html5-qrcode-element" type="file" accept="image/*" style="display: none;"></label>
+										<div style="font-weight: 400;">Or drop an image to scan</div>
+									</div>
+								</div>
+									<div style="text-align: center;"><a id="html5-qrcode-anchor-scan-type-change" class="html5-qrcode-element" style="text-decoration: underline;">Scan an Image File</a>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="empty"></div>
+							<div id="scanned-result"></div>
+						</div>
+					</div>
+				</div>
+
+				<br>
+				<div class="container">
+
+				</div>
+				<div class="empty"></div>
+				<div class="container">
+
+				</div>
+				<div style="display: block; height: 30px"></div>
+				<div class="container">
+
+
+			<!-- Akhir Konten -->		                  
+		        </div>		         
+      
+		</div>
+	</div>
+</div>
+	
+<script async="" src="qr-code/f(1).txt" crossorigin="anonymous"></script>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6209792783516879" data-ad-slot="5886734070"><iframe id="aswift_1" style="height: 1px !important; max-height: 1px !important; max-width: 1px !important; width: 1px !important;" src="qr-code/saved_resource(2).html"><iframe id="google_ads_frame1" src="qr-code/saved_resource(3).html"></iframe></iframe></ins>
+<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script src="qr-code/highlight.min.js.download"></script>
+<script src="qr-code/html5-qrcode.min.v2.3.0.js.download"></script>
+<script>
+function docReady(fn) {
+    // see if DOM is already available
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+	// call on next available tick
+	setTimeout(fn, 1);
+    } else {
+	document.addEventListener("DOMContentLoaded", fn);
+    }
+}
+/** Ugly function to write the results to a table dynamically. */
+function printScanResultPretty(codeId, decodedText, decodedResult) {
+	let resultSection = document.getElementById('scanned-result');
+    let tableBodyId = "scanned-result-table-body";
+    if (!document.getElementById(tableBodyId)) {
+	let table = document.createElement("table");
+	table.className = "styled-table";
+	table.style.width = "100%";
+	resultSection.appendChild(table);
+	let theader = document.createElement('thead');
+	let trow = document.createElement('tr');
+	let th1 = document.createElement('td');
+	th1.innerText = "Count";
+	let th2 = document.createElement('td');
+	th2.innerText = "Format";
+	let th3 = document.createElement('td');
+	th3.innerText = "Result";
+	trow.appendChild(th1);
+	trow.appendChild(th2);
+	trow.appendChild(th3);
+	theader.appendChild(trow);
+	table.appendChild(theader);
+	let tbody = document.createElement("tbody");
+	tbody.id = tableBodyId;
+	table.appendChild(tbody);
+    }
+    let tbody = document.getElementById(tableBodyId);
+    let trow = document.createElement('tr');
+    let td1 = document.createElement('td');
+    td1.innerText = `${codeId}`;
+    let td2 = document.createElement('td');
+    td2.innerText = `${decodedResult.result.format.formatName}`;
+    let td3 = document.createElement('td');
+    td3.innerText = `${decodedText}`;
+    trow.appendChild(td1);
+    trow.appendChild(td2);
+    trow.appendChild(td3);
+    tbody.appendChild(trow);
+}
+docReady(function() {
+	hljs.initHighlightingOnLoad();
+	var lastMessage;
+	var codeId = 0;
+	function onScanSuccess(decodedText, decodedResult) {
+	/**
+	 * If you following the code example of this page by looking at the
+	 * source code of the demo page - good job!!
+	 * 
+	 * Tip: update this function with a success callback of your choise.
+	 */
+		if (lastMessage !== decodedText) {
+			lastMessage = decodedText;
+	    printScanResultPretty(codeId, decodedText, decodedResult);
+	    ++codeId;
+		}
+	}
+    var qrboxFunction = function(viewfinderWidth, viewfinderHeight) {
+	// Square QR Box, with size = 80% of the min edge.
+	var minEdgeSizeThreshold = 250;
+	var edgeSizePercentage = 0.75;
+	var minEdgeSize = (viewfinderWidth > viewfinderHeight) ?
+	    viewfinderHeight : viewfinderWidth;
+	var qrboxEdgeSize = Math.floor(minEdgeSize * edgeSizePercentage);
+	if (qrboxEdgeSize < minEdgeSizeThreshold) {
+	    if (minEdgeSize < minEdgeSizeThreshold) {
+		return {width: minEdgeSize, height: minEdgeSize};
+	    } else {
+		return {
+		    width: minEdgeSizeThreshold,
+		    height: minEdgeSizeThreshold
+		};
+	    }
+	}
+	return {width: qrboxEdgeSize, height: qrboxEdgeSize};
+    }
+	let html5QrcodeScanner = new Html5QrcodeScanner(
+	"reader", 
+	{ 
+	    fps: 10,
+	    qrbox: qrboxFunction,
+	    // Important notice: this is experimental feature, use it at your
+	    // own risk. See documentation in
+	    // mebjas@/html5-qrcode/src/experimental-features.ts
+	    experimentalFeatures: {
+		useBarCodeDetectorIfSupported: true
+	    },
+	    rememberLastUsedCamera: true,
+	    showTorchButtonIfSupported: true
+	});
+	html5QrcodeScanner.render(onScanSuccess);
+});
+</script>
+	
+<script async="" src="qr-code/js"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-158605510-1');
+</script>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>                
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.0/angular-ui-router.min.js"></script>
+<script src="js/main.js"></script>	
+	
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Demo of a cross platform HTML5 QR Code scanner","headline":"HTML5 QR Code Scanner Demo","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://blog.minhazav.dev/images/rsz_self_1_1.jpg"}},"url":"https://blog.minhazav.dev/research/html5-qrcode"}</script>
+
+<script>
+
+	app.config(["$locationProvider", function($locationProvider) {
+		$locationProvider.html5Mode(true);
+	}]);
+	
+</script>
+	
+</body>
+</html> 
 
